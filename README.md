@@ -32,7 +32,7 @@ $ git clone --recursive https://github.com/dalgu90/cim-misspelling.git
 
 2. Download `LRWD` and `prevariants` of the SPECIALIST Lexicon from the [LSG website](https://lhncbc.nlm.nih.gov/LSG/Projects/lexicon/current/web/release/) (2018AB version) and put under `data/umls`.
 
-3. Download the English dictionary `english.txt` from [here](https://github.com/dwyl/english-words/tree/7cb484da5de560c11109c8f3925565966015e5a9) (commit 7cb484d) and put under `data/english_words`.
+3. Download the English dictionary `words.txt` from [here](https://github.com/dwyl/english-words/tree/7cb484da5de560c11109c8f3925565966015e5a9) (commit 7cb484d) and put under `data/english_words`.
 
 4. Run `scripts/build_vocab_corpus.ipynb` to build the dictionary and split the MIMIC-III notes into files.
 
