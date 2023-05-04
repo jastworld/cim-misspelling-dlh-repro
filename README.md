@@ -70,7 +70,7 @@ You may want to set `init_step` to specify the checkpoint you want to load
 
 ### Results
 
-Results from our test runs for both beam width testing and hyperparameter modification testing can be found under the /results folder.
+Results from our test runs for both beam width testing and hyperparameter modification testing can be found under the results folder.
 
 ## Cite this work
 
