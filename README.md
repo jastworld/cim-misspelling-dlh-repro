@@ -73,7 +73,7 @@ You may want to set `init_step` to specify the checkpoint you want to load
 Results from our test runs for both beam width testing and hyperparameter modification testing can be found under the results folder.
 
 An example row of output from a results pickle file:
-<t>{'example_id': 1, 'note_id': 393217, 'typo': 'ztracking', 'correct': 'tracking', 'score': -1.137838363647461, 'lm_score': -0.5822828080919054}</t>
+<br>{'example_id': 1, 'note_id': 393217, 'typo': 'ztracking', 'correct': 'tracking', 'score': -1.137838363647461, 'lm_score': -0.5822828080919054}</br>
 The results show the typo word with the correction as corrected by the model, followed by a score consisting of the language model score and the corruption model score, and finally the language model score. The higher the score, the closer the model thinks the potential correct word from the dictionary is to the typo word.
 
 ## Cite this work
