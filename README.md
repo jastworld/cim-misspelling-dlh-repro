@@ -68,6 +68,9 @@ You can also download the pre-trained LMs and put under `model/` (e.g. the CIM-b
 Please specify the dataset dir and the file to evaluate in the evaluation script (`eval_cim_base.sh` or `eval_cim_large.sh`), and run the script.  
 You may want to set `init_step` to specify the checkpoint you want to load
 
+### Results
+
+Results from our test runs for both beam width testing and hyperparameter modification testing can be found under the /results folder.
 
 ## Cite this work
 
