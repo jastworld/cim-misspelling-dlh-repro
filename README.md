@@ -42,7 +42,7 @@ $ git clone --recursive https://github.com/dalgu90/cim-misspelling.git
             <br><b>NOTE:</b> The CSpell URL is currently under construction and not working. To access the CSpell data, please e-mail juyongk@cs.cmu.edu. We modified the CSpell preprocessing notebook to access our local .tgz files provided by Juyong Kim.</br>
     - Synthetic misspelling dataset from the MIMIC-III: `scripts/synthetic_dataset.ipynb`
     - <b>DLH Synthetic misspelling dataset from the MIMIC-III:</b> `scripts/dlh_mimic_synthetic.ipynb`
-    - <b>DLH Multiple words misspelling dataset (fully constructed by Maya and Tayo)</b> `scripts/dlh_multi_words_misspelling_dataset.ipynb`
+    - <b>DLH Multiple words misspelling dataset (fully constructed by Maya and Tayo):</b> `scripts/dlh_multi_words_misspelling_dataset.ipynb`
 
 6. Download the BlueBERT model from [here](https://github.com/ncbi-nlp/bluebert) under `bert/ncbi_bert_{base|large}`.
     - For CIM-Base, please download "BlueBERT-Base, Uncased, PubMed+MIMIC-III"
