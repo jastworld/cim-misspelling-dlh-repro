@@ -71,7 +71,7 @@ You may want to set `init_step` to specify the checkpoint you want to load
 
 ### Results
 
-Results from our test runs for both beam width testing and hyperparameter modification testing can be found under the results folder.
+Results from our test runs for beam width testing, hyperparameter modification testing, and our synthetic dataset testing can be found under the results folder.
 
 An example row of output from a results pickle file:
 <br>{'example_id': 1, 'note_id': 393217, 'typo': 'ztracking', 'correct': 'tracking', 'score': -1.137838363647461, 'lm_score': -0.5822828080919054}</br>
