@@ -39,7 +39,7 @@ $ git clone --recursive https://github.com/dalgu90/cim-misspelling.git
 5. Run the Jupyter notebook for the dataset that you want to download/pre-process:
     - MIMIC-III misspelling dataset, or [ClinSpell](https://github.com/clips/clinspell) (Fivez et al., 2017): `scripts/preprocess_clinspell.ipynb`
     - [CSpell](https://lsg3.nlm.nih.gov/LexSysGroup/Projects/cSpell/current/web/index.html) dataset (Lu et al., 2019): `scripts/preprocess_cspell.ipynb`
-            - <br>NOTE: The CSpell URL is currently under construction and not working. To access the CSpell data, please e-mail juyongk@cs.cmu.edu. We modified the CSpell preprocessing notebook to access our local .tgz files provided by Juyong Kim.</br>
+            <br><b>NOTE:</b> The CSpell URL is currently under construction and not working. To access the CSpell data, please e-mail juyongk@cs.cmu.edu. We modified the CSpell preprocessing notebook to access our local .tgz files provided by Juyong Kim.</br>
     - Synthetic misspelling dataset from the MIMIC-III: `scripts/synthetic_dataset.ipynb`
 
 6. Download the BlueBERT model from [here](https://github.com/ncbi-nlp/bluebert) under `bert/ncbi_bert_{base|large}`.
