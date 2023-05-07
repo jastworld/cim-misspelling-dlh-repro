@@ -1,6 +1,8 @@
-<b>Beam width 30 and beam width 300 test results:</b>
-<br>Result files containing the keyword "results" in the title contain the full array of potentially correct words that the transformer deemed closest to the typo word.
-Result files containing the keyword "correct" in the title only contain the word the transformer deems as the correct word for the typo.
+<b>Reading results:</b>
+<br>To read the results from the pickle files, we recommend using the following command in a Jupyter Notebook:
 
-<b>Hyperparameter test results:</b>
-<br>These result files only contain the word the transformer deems as the correct word for the typo.
+<code>import pandas as pd
+obj = pd.read_pickle("filename.pkl")
+</code>
+
+After this, you can read an object entry at the index (ex: obj[0]) or loop through the object to read multiple/all entries.
