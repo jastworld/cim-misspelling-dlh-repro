@@ -48,6 +48,9 @@ $ git clone --recursive https://github.com/dalgu90/cim-misspelling.git
     - For CIM-Base, please download "BlueBERT-Base, Uncased, PubMed+MIMIC-III"
     - For CIM-Large, please download "BlueBERT-Large, Uncased, PubMed+MIMIC-III"
 
+
+## Running the Author's Model
+
 ### Pre-training the char-based LM on MIMIC-III
 
 Please run `pretrain_cim_base.sh` (CIM-Base) or `pretrain_cim_large.sh`(CIM-Large) and to pretrain the character langauge model of CIM.
@@ -66,10 +69,44 @@ You can also download the pre-trained LMs and put under `model/` (e.g. the CIM-b
 - [CIM-Base (12-layer)](https://drive.google.com/file/d/1h-0ivx8H1lJB3s00SSOW4YAtvlGnW81s/view?usp=sharing)
 - [CIM-Large (24-layer)](https://drive.google.com/file/d/1gFPC1uSNR8VOCCZqb7RVc76tlUN1wBYB/view?usp=sharing)
 
+
+
 ### Misspelling Correction with CIM
 
 Please specify the dataset dir and the file to evaluate in the evaluation script (`eval_cim_base.sh` or `eval_cim_large.sh`), and run the script.  
 You may want to set `init_step` to specify the checkpoint you want to load
+
+## Training the  Project Model
+Please ensure you have obtained all the datasets to start this step;
+1. Go the the notebook located in `./word_based_lm.ipynb` and uncomment the pip install line and install the relevant packages. The model notebook depends on various portions but we did add the `./model/word_lm.py` during the course of the project.
+2. Run the notebook
+3. Check to make sure that the model is actually stored in `output_dir`
+
+## Evaluating the Project Model
+1. Go the the notebook located in `./dlh-evaluation.ipynb` and uncomment the pip install line and install the relevant packages
+2. Run the notebook
+
+
+## Experiment with the Pipeline masking
+
+* Go to the last cell in the and run the model with ensure you have transformers installed
+* Come up with a medical lingo and update the sentence masking out the word to fill like so:
+
+```
+from transformers import pipeline, AutoModelForMaskedLM
+
+model_trained = AutoModelForMaskedLM.from_pretrained("./bluebert-finetuned-mimic")
+
+mask_filler = pipeline(
+    "fill-mask", model=output_dir, top_k= 20
+)
+
+preds = mask_filler("Patient mentioned she took tylenol for the [MASK]")
+
+for pred in preds:
+    print(f"{pred['sequence']}")
+    
+```
 
 ### Results
 
@@ -78,6 +115,10 @@ Results from our test runs for beam width testing, hyperparameter modification t
 An example row of output from a results pickle file:
 <br>{'example_id': 1, 'note_id': 393217, 'typo': 'ztracking', 'correct': 'tracking', 'score': -1.137838363647461, 'lm_score': -0.5822828080919054}</br>
 The results show the typo word with the correction as corrected by the model, followed by a score consisting of the language model score and the corruption model score, and finally the language model score. The higher the score, the closer the model thinks the potential correct word from the dictionary (in this case, 'tracking') is to the typo word ('ztracking' here).
+
+
+
+
 
 ## Cite this work
 
