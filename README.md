@@ -78,12 +78,12 @@ You may want to set `init_step` to specify the checkpoint you want to load
 
 ## Training the  Project Model
 Please ensure you have obtained all the datasets to start this step;
-1. Go the the notebook located in `./word_based_lm.ipynb` and uncomment the pip install line and install the relevant packages. The model notebook depends on various portions but we did add the `./model/word_lm.py` during the course of the project.
+1. Go to the notebook located in `./word_based_lm.ipynb` and uncomment the pip install line and install the relevant packages. The model notebook depends on various portions but we did add the `./model/word_lm.py` during the course of the project.
 2. Run the notebook
 3. Check to make sure that the model is actually stored in `output_dir`
 
 ## Evaluating the Project Model
-1. Go the the notebook located in `./dlh-evaluation.ipynb` and uncomment the pip install line and install the relevant packages
+1. Go to the notebook located in `./dlh-evaluation.ipynb` and uncomment the pip install line and install the relevant packages
 2. Run the notebook
 
 
