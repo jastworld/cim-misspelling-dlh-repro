@@ -19,7 +19,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import transformers
-from transformers.generation_utils import top_k_top_p_filtering
+from transformers import GenerationMixin
 from fastDamerauLevenshtein import damerauLevenshtein
 import multiprocessing
 
@@ -82,7 +82,7 @@ class BeamHypotheses(object):
             return ret
 
 
-class CharacterLanguageModel(transformers.PretrainedBartModel):
+class CharacterLanguageModel(transformers.BartPretrainedModel):
     def __init__(self,
                  args,
                  config,
